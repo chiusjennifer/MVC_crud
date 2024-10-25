@@ -1,0 +1,63 @@
+﻿@model MVC_crud.Models.Entities.Customer
+@{
+}
+<h1>Edit Customer Data</h1>
+@if(Model is null)
+{
+    <p>No Customer was found with this ID</p>
+}
+else
+{
+}
+<form method="post">
+    <div class="mt-3">
+        <label class="form-label">Customer ID :</label>
+        <input type="text" class="form-control" asp-for="CustomerID" readonly/>
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Company Name :</label>
+        <input type="text" class="form-control" asp-for="CompanyName" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Contact Name :</label>
+        <input type="text" class="form-control" asp-for="ContactName" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Contact Title :</label>
+        <input type="text" class="form-control" asp-for="ContactTitle" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Address :</label>
+        <input type="text" class="form-control" asp-for="Address" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">City :</label>
+        <input type="text" class="form-control" asp-for="City" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Region :</label>
+        <input type="text" class="form-control" asp-for="Region" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">PostalCode :</label>
+        <input type="text" class="form-control" asp-for="PostalCode" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Country :</label>
+        <input type="text" class="form-control" asp-for="Country" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Phone :</label>
+        <input type="text" class="form-control" asp-for="Phone" />
+    </div>
+    <div class="mt-3">
+        <label class="form-label">Fax :</label>
+        <input type="text" class="form-control" asp-for="Fax" />
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class=" btn btn-danger ms-3"
+                asp-action="DelCust"
+                asp-controller="CustomerHome">Delete</button>
+    </div>
+</form>
